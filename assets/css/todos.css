@@ -1,6 +1,6 @@
 #container {
     width: 360px;
-    margin: 220px auto;
+    margin: 320px auto;
     background: #f7f7f7;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.140);
     font-family: 'Roboto', sans-serif;
@@ -74,9 +74,9 @@ li:hover span{
 
 
 body{
-    background: #E386A6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #E386A6, #FFCFB9);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #E386A6, #FFCFB9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #E386A6;  /*fallback for old browsers*/
+background: -webkit-linear-gradient(to right, #E386A6, #FFCFB9);  /*Chrome 10-25, Safari 5.1-6*/
+background: linear-gradient(to right, #E386A6, #FFCFB9); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
 
 }
 .hoverli{
