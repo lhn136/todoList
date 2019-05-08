@@ -1,11 +1,11 @@
-img#logo{
+img#logo,a{
     width: 70px;
     height: 70px;
 }
 
 #container {
     width: 360px;
-    margin: 320px auto;
+    margin: 220px auto;
     background: #f7f7f7;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.140);
     font-family: 'Roboto', sans-serif;
