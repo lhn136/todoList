@@ -9,7 +9,6 @@ $("ul").on("click","li",function (event) {
 
 // Click on x-box to delete todo
 $("ul").on("click","span",function(event) {
-    console.log("spanclicked");
     $(this).parent().fadeOut(500,function(){
         $(this).remove();
     });
@@ -39,8 +38,6 @@ $(".fa-download").click(function(){
     });
     txtfile = (objarr.join("\n"));
     download("todos.txt",txtfile)
-    
-
 });
 
 function download(filename, text) {
@@ -56,45 +53,6 @@ function download(filename, text) {
     document.body.removeChild(element);
 }
 
-// $(".fa-upload").click(function (event) {
-//     var input = event.target;
-
-//     var reader = new FileReader();
-//     reader.onload = function () {
-//         var text = reader.result;
-//         var node = document.getElementById('output');
-//         node.innerText = text;
-//         console.log(reader.result.substring(0, 200));
-//     };
-//     reader.readAsText(input.files);
-// });
-
-// document.getElementsByClassName('fa-upload').addEventListener('click',openDialog);
-
-// $(".fa-upload").click(function (callback) {
-//     // on click: once clicked check if the input is null
-//     const input = document.getElementById('uploadid')
-//     // on change:
-//     var loaded = false;
-
-//     if (input.files[0] == null ){
-//         document.getElementById("uploadid").click()
-//     }
-
-//     console.log(input.files[0] == null)
-//     let count = 0
-//     while (count < 10000){
-//         count+=1
-//         document.getElementById("uploadid").click()
-//     } 
-//     // add a sleep time out
-//     console.log(input.files[0])
-//     var reader = new FileReader();
-//     reader.onload = function () {
-//         console.log(reader.result);
-//     };
-//     reader.readAsDataURL(input.files[0]);
-
 $("#file-input").change(function (e) {
     // filename = this.files[0];
     console.log(filename);
@@ -105,47 +63,20 @@ $("#file-input").change(function (e) {
     var reader = new FileReader();
     reader.onload = function (e) {
         var contents = this.result;
-        console.log(contents);
+        var newTodos = contents.split("\n")
+        
+
+        
+        $("li").fadeOut(500, function () {
+            $(this).remove();
+        });
+        event.stopPropagation();
+        newTodos.forEach(function(todo){
+            console.log(todo)
+            $(".list").append("<li><span><i class='fas fa-trash'></i></span> " + todo+ "</li>")
+        });
     };
+    // console.log(contents)
     reader.readAsText(filename);
     
 });
-
-
-// $(".fa-upload").click(function () {
-//     print("clicked")
-//     document.getElementById('uploadid').addEventListener('change', readSingleFile, false);
-// });
-    
-// function readSingleFile(e) {
-//         var file = e.target.files[0];
-//         if (!file) {
-//             return;
-//         }
-//         var reader = new FileReader();
-//         reader.onload = function (e) {
-//             var contents = e.target.result;
-//             displayContents(contents);
-//         };
-//         reader.readAsText(file);
-//     }
-
-// function displayContents(contents) {
-//         var element = document.getElementById('file-content');
-//         element.textContent = contents;
-//     }
-
-// });
-// function openDialog(){
-//     document.getElementById('fileid').click()
-// }
-
-// document.getElementById("myBtn").addEventListener("click", function() {
-
-//   var reader = new FileReader();
-//   reader.addEventListener('load', function() {
-//     document.getElementById('file').innerText = this.result;
-//   });
-//   reader.readAsText(document.querySelector('input').files[0]);
-
-// });
