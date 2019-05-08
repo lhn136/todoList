@@ -13,7 +13,7 @@ Just run the application with any browser you have. I recommend using Chrome or 
 The load button only load txt file. It will not work correctly if you upload a different file type.
 
 ```
-correct: 	  todo.txt
+correct:   todo.txt
 incorrect: 	todo.png
 incorrect: 	todo.docx
 ```
