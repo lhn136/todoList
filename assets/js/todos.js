@@ -73,7 +73,7 @@ $("#file-input").change(function (e) {
         event.stopPropagation();
         newTodos.forEach(function(todo){
             console.log(todo)
-            $(".list").append("<li><span><i class='fas fa-trash'></i></span> " + todo+ "</li>")
+            $(".list").append("<li><span><i class='fas fa-trash'></i></span> " + todo.trim()+ "</li>")
         });
     };
     // console.log(contents)
