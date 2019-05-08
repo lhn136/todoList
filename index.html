@@ -14,15 +14,26 @@
 </head>
 <body>
     <div id="container">
-            <h1>To-do List<i class="fa fa-plus"></i></h1>
-            <input type="text" placeholder="Add New Task">
+            <h1>To-do List<i class="fa fa-plus"></i>
+                <i class="fas fa-download"></i>
+             
+                    <label id="labelWrapperInput"for="file-input">
+                        <i for="file-input" class="fas fa-upload" ></i>
+                        <input type="file" id="file-input" style="visibility:hidden;"/>
+                    </label>
+                
+            </h1>
+            <input id="addTodos" type="text" placeholder="Add New Task">
             <ul class="list">
                 <li><span><i class="fas fa-trash"></i></span> Go to Potions Class</li>
                 <li><span><i class="fas fa-trash"></i></span> Buy Robes</li>
-                <li><span><i class="fas fa-trash"></i></span> Eat Venessa</li>
+                <li><span><i class="fas fa-trash"></i></span> Eat Lunch</li>
             </ul>
 
+
+
     </div>
+
 
     <script type="text/javascript" src="assets/js/todos.js"></script>
 </body>
