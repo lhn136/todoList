@@ -95,10 +95,22 @@ function download(filename, text) {
 //     };
 //     reader.readAsDataURL(input.files[0]);
 
-$("#file-input").change(function () {
-    filename = this.files[0]
+$("#file-input").change(function (e) {
+    // filename = this.files[0];
     console.log(filename);
+    var filename = this.files[0];
+    if (!filename) {
+            return;
+        }
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        var contents = this.result;
+        console.log(contents);
+    };
+    reader.readAsText(filename);
+    
 });
+
 
 // $(".fa-upload").click(function () {
 //     print("clicked")
