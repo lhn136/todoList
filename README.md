@@ -3,6 +3,7 @@
 I've created a simple todo list using JS HTML/CSS. 
 This todo list allow you to load a .txt file to the list
 (keep in mind it will delete everything on the todolist)
+I developed this with both DOM manipulation and jQuery. I am more famliar with DOM manipulation. I just wanted to apply  jQuery techniques to this project
 
 ## Getting Started
 
@@ -17,10 +18,6 @@ correct:   todo.txt
 incorrect: 	todo.png
 incorrect: 	todo.docx
 ```
-
-## Development
-
-I developed this with both DOM manipulation and jQuery. I am more famliar with DOM manipulation. I just wanted to apply  jQuery techniques to this project
 
 ## Built With
 
