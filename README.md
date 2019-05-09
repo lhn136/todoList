@@ -18,7 +18,7 @@ incorrect: 	todo.png
 incorrect: 	todo.docx
 ```
 
-## Deployment
+## Development
 
 I developed this with both DOM manipulation and jQuery. I am more famliar with DOM manipulation. I just wanted to applied some jQuery techniques to this project
 
